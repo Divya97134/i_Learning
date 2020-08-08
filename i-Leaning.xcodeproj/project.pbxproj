@@ -23,6 +23,7 @@
 		E0DCF58324DE899300F8C13E /* TeacherHomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0DCF58224DE899300F8C13E /* TeacherHomeViewController.swift */; };
 		E0DCF58624DE8EA500F8C13E /* TeacherDetails.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0DCF58524DE8EA500F8C13E /* TeacherDetails.swift */; };
 		E0DCF58824DE910600F8C13E /* UtilityClaass.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0DCF58724DE910600F8C13E /* UtilityClaass.swift */; };
+		E0DCF58A24DEB61800F8C13E /* TeacherLoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0DCF58924DEB61800F8C13E /* TeacherLoginViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -44,6 +45,7 @@
 		E0DCF58224DE899300F8C13E /* TeacherHomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TeacherHomeViewController.swift; sourceTree = "<group>"; };
 		E0DCF58524DE8EA500F8C13E /* TeacherDetails.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TeacherDetails.swift; sourceTree = "<group>"; };
 		E0DCF58724DE910600F8C13E /* UtilityClaass.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UtilityClaass.swift; sourceTree = "<group>"; };
+		E0DCF58924DEB61800F8C13E /* TeacherLoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TeacherLoginViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -99,6 +101,7 @@
 				E088FA2024DE749E0096AFCA /* StudentLoginViewController.swift */,
 				E088FA0B24DE612A0096AFCA /* ViewController.swift */,
 				E0DCF58224DE899300F8C13E /* TeacherHomeViewController.swift */,
+				E0DCF58924DEB61800F8C13E /* TeacherLoginViewController.swift */,
 			);
 			path = ViewController;
 			sourceTree = "<group>";
@@ -199,6 +202,7 @@
 				E0DCF58624DE8EA500F8C13E /* TeacherDetails.swift in Sources */,
 				E088FA1F24DE74840096AFCA /* StudentSignupViewController.swift in Sources */,
 				E088FA0824DE612A0096AFCA /* AppDelegate.swift in Sources */,
+				E0DCF58A24DEB61800F8C13E /* TeacherLoginViewController.swift in Sources */,
 				E088FA0A24DE612A0096AFCA /* SceneDelegate.swift in Sources */,
 				E0DCF58824DE910600F8C13E /* UtilityClaass.swift in Sources */,
 				E088FA2A24DE84360096AFCA /* Constant.swift in Sources */,

@@ -1,5 +1,5 @@
 //
-//  TeacherHomeViewController.swift
+//  TeacherLoginViewController.swift
 //  i-Leaning
 //
 //  Created by Divya shrivastava on 8/8/20.
@@ -7,24 +7,14 @@
 
 import UIKit
 
-class TeacherHomeViewController: UIViewController {
- 
-    var teacherDetail:TeacherDetail?
-    
-    @IBOutlet var lblName: UILabel!
-    @IBOutlet var lblEmail: UILabel!
+class TeacherLoginViewController: UIViewController {
 
-    @IBOutlet var lblCourse: UILabel!
-    
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.lblName.text = teacherDetail?.name
-        self.lblEmail.text = teacherDetail?.email
+
         // Do any additional setup after loading the view.
     }
-    @IBAction func tapOnBack(_ sender: Any) {
-        self.navigationController?.popViewController(animated: true)
-    }
+    
 
     /*
     // MARK: - Navigation

@@ -33,8 +33,30 @@ class TeacherSignupViewController: UIViewController,UITextFieldDelegate {
             self.showAlert(msg: "Please enter your name")
             return
         }
+        else if self.txtEmail.text == "" {
+            self.showAlert(msg: "Please enter your email")
+            return
+        }
+        else if self.txtPassword.text == "" {
+            self.showAlert(msg: "Please enter your password")
+            return
+        }
+        else if arrSelectedCourseList == nil {
+            self.showAlert(msg: "Please choose your course type")
+            return
+        }
         
-            let detailobj:TeacherDetail = TeacherDetail.init(name: self.txtName.text ?? "", email: self.txtEmail.text ?? "", password: self.txtPassword.text ?? "", courseList: self.arrSelectedCourseList! )
+        
+        let detailobj:TeacherDetail = TeacherDetail.init(name: self.txtName.text ?? "", email: self.txtEmail.text ?? "", password: self.txtPassword.text ?? "", courseList: self.arrSelectedCourseList! )
+      
+        // fetching data from server
+        
+//        ServiceCallClass.sharedInstance.serviceCallForGetCourseList(methodType: .GET, urlString: "") { (resp, data) in
+//
+//        } onError: { (error, resp) in
+//
+//        }
+
         self.performSegue(withIdentifier: "Detail", sender: detailobj)
         
     }
@@ -65,6 +87,9 @@ class TeacherSignupViewController: UIViewController,UITextFieldDelegate {
 
     }
     
+    @IBAction func tapOnBack(_ sender: Any) {
+        self.navigationController?.popViewController(animated: true)
+    }
 }
 
 
