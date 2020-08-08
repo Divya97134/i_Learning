@@ -19,6 +19,8 @@ class ViewController: UIViewController {
     }
     
     @IBAction func tapOnStudent(_ sender: Any) {
+      //  self.performSegue(withIdentifier: "segueStudent", sender: nil)
+
     }
     
     
