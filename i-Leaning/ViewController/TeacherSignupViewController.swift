@@ -7,7 +7,7 @@
 
 import UIKit
 
-class TeacherSignupViewController: UIViewController {
+class TeacherSignupViewController: UIViewController,UITextFieldDelegate {
 
     @IBOutlet var txtName: UITextField!
     @IBOutlet var txtEmail: UITextField!
@@ -21,23 +21,50 @@ class TeacherSignupViewController: UIViewController {
         super.viewDidLoad()
         arrCourseList = Array()
         arrCourseList  = ["Science", "Math", "English"]
-        
         arrSelectedCourseList = Array()
         // Do any additional setup after loading the view.
     }
     
     
-   
-    /*
-    // MARK: - Navigation
+    @IBAction func tapOndone(_ sender: Any) {
+       
+        self.txtName.text = self.txtName.text?.trimmingCharacters(in: .whitespacesAndNewlines)
+        if self.txtName.text == "" {
+            self.showAlert(msg: "Please enter your name")
+            return
+        }
+        
+            let detailobj:TeacherDetail = TeacherDetail.init(name: self.txtName.text ?? "", email: self.txtEmail.text ?? "", password: self.txtPassword.text ?? "", courseList: self.arrSelectedCourseList! )
+        self.performSegue(withIdentifier: "Detail", sender: detailobj)
+        
+    }
+    //delegate
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        textField.resignFirstResponder()
+        return true
+
+    }
+    // MARK: - Navigation}
 
     // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         // Get the new view controller using segue.destination.
         // Pass the selected object to the new view controller.
+        let objDetail:TeacherDetail = sender as! TeacherDetail
+        let vcobj = segue.destination as! TeacherHomeViewController
+        vcobj.teacherDetail = objDetail
     }
-    */
+    
+    func showAlert(msg:String) {
+           let alert = UIAlertController(title: "Alert", message: msg, preferredStyle: .alert)
 
+           alert.addAction(UIAlertAction(title: "ok", style: .default, handler: { (_) in
+               print("You've pressed default")
+           }))
+        self.present(alert, animated: true, completion: nil)
+
+    }
+    
 }
 
 
